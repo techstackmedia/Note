@@ -1,5 +1,5 @@
 {
-  "posts": [
+  "notes": [
     {
       "userId": 1,
       "id": 1,
@@ -150,7 +150,7 @@
       "title": "rem alias distinctio quo quis",
       "body": "ullam consequatur ut\nomnis quis sit vel consequuntur\nipsa eligendi ipsum molestiae et omnis error nostrum\nmolestiae illo tempore quia et distinctio"
     }
-],
+  ],
   "comments": [
     {
       "id": 1,

@@ -12,17 +12,18 @@ const Note = ({ match, history }) => {
 
   useEffect(() => {
     getNote();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [noteId]);
 
   let getNote = async () => {
-    if (noteId == "new") return;
-    let response = await fetch(`http://localhost:5000/posts/${noteId}`);
+    if (noteId === "new") return;
+    let response = await fetch(`http://127.0.0.1:5000/notes/${noteId}`);
     let data = await response.json();
     setNote(data);
   };
 
   const createNote = async () => {
-    await fetch(`http://localhost:5000/posts`, {
+    await fetch(`http://127.0.0.1:5000/notes/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -32,7 +33,7 @@ const Note = ({ match, history }) => {
   };
 
   const updateNote = async () => {
-    await fetch(`http://localhost:5000/posts/${noteId}/`, {
+    await fetch(`http://127.0.0.1:5000/notes/${noteId}/`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -42,7 +43,7 @@ const Note = ({ match, history }) => {
   };
 
   const deleteNote = async () => {
-    await fetch(`http://localhost:5000/posts/${noteId}/`, {
+    await fetch(`http://127.0.0.1:5000/notes/${noteId}/`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

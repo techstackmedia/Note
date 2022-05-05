@@ -57,7 +57,6 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Outlet,
 } from "react-router-dom";
 
 import "./App.css";
@@ -72,8 +71,8 @@ function App() {
         <div className="app">
           <Header />
           <Routes>
-            <Route path="/" component={<Notes />} />
-            <Route path="/post/:id" component={<Note />} />
+            <Route path="/" element={<Notes />} />
+            <Route path="/note/:id" element={<Note />} />
           </Routes>
         </div>
       </div>

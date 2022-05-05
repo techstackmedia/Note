@@ -11,7 +11,7 @@ const Notes = () => {
   }, []);
 
   let getNotes = async () => {
-    let response = await fetch("http://localhost:5000/posts");
+    let response = await fetch("http://127.0.0.1:5000/notes/");
     let data = await response.json();
     setNotes(data);
   };
