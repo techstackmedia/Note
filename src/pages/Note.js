@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-//import notes from '../assets/data'
 import { ReactComponent as ArrowLeft } from "../assets/arrow-left.svg";
 import { Outlet, Link } from "react-router-dom";
 
@@ -8,11 +7,9 @@ const Note = ({ match, history }) => {
 
   let [note, setNote] = useState(null);
 
-  //let note = notes.find(note => note.id == noteId)
-
   useEffect(() => {
     getNote();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [noteId]);
 
   let getNote = async () => {
@@ -69,11 +66,11 @@ const Note = ({ match, history }) => {
     <div className="note">
       <div className="note-header">
         <nav>
-        <h3>
-          <Link to={"/"}>
-            <ArrowLeft onClick={handleSubmit} />
-          </Link>
-        </h3>
+          <h3>
+            <Link to={"/"}>
+              <ArrowLeft onClick={handleSubmit} />
+            </Link>
+          </h3>
         </nav>
         {noteId !== "new" ? (
           <button onClick={deleteNote}>Delete</button>
