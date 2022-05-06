@@ -33,6 +33,7 @@
 //       .then((data) => setPosts(data.id));
 //   }, []);
 
+
 //   useEffect(() => {
 //     const requestOptions = {
 //       method: "PUT",
@@ -72,7 +73,7 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Notes />} />
-            <Route path="/note/:id" element={<Note />} />
+            <Route path="/post/:id" element={<Note />} />
           </Routes>
         </div>
       </div>
